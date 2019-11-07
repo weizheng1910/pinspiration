@@ -1,6 +1,6 @@
 # Pinspiration
 
-For this week's lab you and a partner will be creating Pinspiration, an idea-sharing platform that functions just like [this little website](https://www.pinterest.com/)!
+You will be creating Pinspiration, an idea-sharing platform that functions just like [this little website](https://www.pinterest.com/)!
 
 ## Technical Summary
 
@@ -15,23 +15,25 @@ Not sure where to start? Try tackling your application in the following order...
   4. Define some basic routes
   5. Add controllers / actions & views
 
-## Pairing Up
+### Getting Started
 
-For this lab, you *must* work in pairs, practicing pair-programming. That means only one person should be typing code at a time. The other computer should *only* be used for looking up documentation.
+In this cloned repo directory:
 
-Read [this short article](http://codergeneral.com/strategies-for-effective-pair-programming/) about strategies and rational for pair programming.
-
-You can (and should) use git so that you can swap computers if you decide you'd like to.
-
-## Goals
-
-You and your partner should assess how you're feeling with Rails, and based on that, decide which level you'd like to try and implement.
-
+```bash
+rails _5.2.3_ new . -d postgresql --skip-turbolinks --skip-coffee
+```
 ## Spec
 
-As always, we build our application iteratively. You and your partner should implement all the features of a level before implementing features of the next. Spend some time planning your approach to a feature before launching into it. Take advantage of the whiteboards -- they're _everywhere_.
+As always, we build our application iteratively. You implement all the features of a level before implementing features of the next. Spend some time planning your approach to a feature before launching into it. Take advantage of the whiteboards -- they're _everywhere_.
 
-### Bronze
+Add to your `seeds.rb` for the deafult data to make each iteration work.
+
+### MVP
+Users can log in and create a pin.
+
+They can see a single pin and a list of all pins.
+
+### Further
 
 Implement two models, with a RESTful interface to manage them...  
   1. Pin  
@@ -47,23 +49,46 @@ Comments have...
 
 There is a one-to-many relationship between Pins and Comments.
 
-### Silver
+A user can see on their `/dashboard` all of their pins.
+A user can see on their `/dashboard` all of their comments for all pins.
 
-Implement two additional models...  
-  1. Board
-  2. Tag
+### Further
+Check out the `ffaker` gem to make fake data in your app.
 
-Pinspiration should have the following associations...  
+### Further
+Bootstrap-ize your app.
+
+### Further
+
+##### Board
+
 - Users have many boards, a board belongs to one user
 - Boards have many pins, a pin belongs to one board
+
+### Further
+
+##### Tag
+
 - Pins have many tags, a tag can be applied to many pins
+- display all the pins for a given tag: `/tags/cats`
 
-> This requires setting up a [many-to-many relationship](https://github.com/ga-wdi-lessons/rails-many-to-many), which you have not learned yet.
-
-### Gold
-
-Suggested features...
+### Further
 
 * Instead of storing an image url as a string, allow users to upload to AWS using
 paperclip or carrierwave
-* Users can search, sort, or filter of pins / boards / tags
+
+### Further
+* Users can sort, or filter of pins / boards / tags
+
+### Further
+- pins can be in multiple boards
+
+### Further
+
+- users can follow other users
+- users can follow boards
+
+### Further
+A user's feed is compilation of the users they follow and the boards they follow
+
+
