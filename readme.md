@@ -56,7 +56,7 @@ A user can see on their `/dashboard` all of their comments for all pins.
 Check out the `ffaker` gem to make fake data in your app.
 
 ### Further
-Bootstrap-ize your app.
+Bootstrap-ize your app by putting the bootstrap CDN `link` tag in the `head`. The `head` tag is in `views/layouts/application.html.erb`
 
 ### Further
 
