@@ -20,7 +20,7 @@ Not sure where to start? Try tackling your application in the following order...
 In this cloned repo directory:
 
 ```bash
-rails _5.2.3_ new . -d postgresql --skip-turbolinks --skip-coffee
+rails _5.2.3_ new . -d postgresql --skip-turbolinks --skip--coffee --skip-git
 ```
 ## Spec
 
